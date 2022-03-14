@@ -1,0 +1,243 @@
+{
+  "id": "7d8663d2-ddf5-41a0-afb1-64b60424c824",
+  "version": "2.0",
+  "name": "SENG438 A4 GUI Tests - Walmart ",
+  "url": "https://www.walmart.ca",
+  "tests": [{
+    "id": "04e4a084-64e9-48ed-aefb-26b287505e46",
+    "name": "Test 1 - Check Deals",
+    "commands": [{
+      "id": "37963d49-2751-4ff3-9320-d9394d09f280",
+      "comment": "",
+      "command": "open",
+      "target": "/en",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ee4a378-f440-4e86-8b98-8b2826b8afe6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1550x838",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9415fafa-e4b4-40b6-8a78-76f421e7c2bd",
+      "comment": "Verify \"deals\" hyperlink exists",
+      "command": "verifyElementPresent",
+      "target": "linkText=Deals",
+      "targets": [
+        ["linkText=Deals", "linkText"],
+        ["css=.css-1n3j5qu:nth-child(5) > .e8z2aj22", "css:finder"],
+        ["xpath=//a[contains(text(),'Deals')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/cp/shop/deals/6000203002145?icid=homepage_HP_TopCategory_Deals_WM')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Deals')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd428832-5876-4543-8ebf-0d0208000daf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Deals",
+      "targets": [
+        ["linkText=Deals", "linkText"],
+        ["css=.css-1n3j5qu:nth-child(5) > .e8z2aj22", "css:finder"],
+        ["xpath=//a[contains(text(),'Deals')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/cp/shop/deals/6000203002145?icid=homepage_HP_TopCategory_Deals_WM')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Deals')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d567971-bd53-4abe-aaf7-334332d8abf4",
+      "comment": "Verify \"shop all\" button exists",
+      "command": "verifyElementPresent",
+      "target": "css=#freeZone3 button",
+      "targets": [
+        ["css=#freeZone3 button", "css:finder"],
+        ["xpath=//div[@id='freeZone3']/div/p/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Shop all')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2f98d3a-5c4c-4b12-91b0-3f2566e853aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=#freeZone3 button",
+      "targets": [
+        ["css=#freeZone3 button", "css:finder"],
+        ["xpath=//div[@id='freeZone3']/div/p/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Shop all')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "caab44bb-b245-48e2-9833-cacbdc677910",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(4) .css-gxbcya",
+      "targets": [
+        ["css=div:nth-child(4) .css-gxbcya", "css:finder"],
+        ["xpath=//img[@alt='Puredown® Feather & Down Pillow Set of 2']", "xpath:img"],
+        ["xpath=//div[@id='product-results']/div[4]/div/a/div/div/img", "xpath:idRelative"],
+        ["xpath=//div[4]/div/a/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "7a4d1a94-50b7-4fff-8493-2a65252ced43",
+    "name": "Test 2 - Add multisave item to cart",
+    "commands": [{
+      "id": "682157e1-1a45-4881-bf03-49c942613d35",
+      "comment": "",
+      "command": "open",
+      "target": "/en",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "edb876b9-bda7-4d40-86a6-754025e6d4ad",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1550x838",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4fb042ff-86f5-4b88-b29f-4ee25c2791b6",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=Multisaves",
+      "targets": [
+        ["linkText=Multisaves", "linkText"],
+        ["css=.css-1n3j5qu:nth-child(2) > .e8z2aj22", "css:finder"],
+        ["xpath=//a[contains(text(),'Multisaves')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/ce/grocery/multisaves/6441889253777?icid=homepage_HP_TopCategory_Multisave_WM')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Multisaves')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0377ac46-1a5f-4400-9ec2-c1ee73da46b7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Multisaves",
+      "targets": [
+        ["linkText=Multisaves", "linkText"],
+        ["css=.css-1n3j5qu:nth-child(2) > .e8z2aj22", "css:finder"],
+        ["xpath=//a[contains(text(),'Multisaves')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/ce/grocery/multisaves/6441889253777?icid=homepage_HP_TopCategory_Multisave_WM')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Multisaves')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "82c2d289-3111-4c51-b0d6-3eab6c345648",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=div:nth-child(1) > .css-7s8ndg .css-gxbcya",
+      "targets": [
+        ["css=div:nth-child(1) > .css-7s8ndg .css-gxbcya", "css:finder"],
+        ["xpath=//img[@alt='Kellogg’s Corn Pops Cereal 320g']", "xpath:img"],
+        ["xpath=//div[@id='product-results']/div/div/a/div/div/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0232d6b-519b-4d51-a5f4-89958e8ddff1",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(1) > .css-7s8ndg .css-gxbcya",
+      "targets": [
+        ["css=div:nth-child(1) > .css-7s8ndg .css-gxbcya", "css:finder"],
+        ["xpath=//img[@alt='Kellogg’s Corn Pops Cereal 320g']", "xpath:img"],
+        ["xpath=//div[@id='product-results']/div/div/a/div/div/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdedc2c7-1687-4df5-a66a-102e2ace21f0",
+      "comment": "Verify item is in stock",
+      "command": "verifyElementPresent",
+      "target": "css=.css-dldxm2",
+      "targets": [
+        ["css=.css-dldxm2", "css:finder"],
+        ["xpath=//div[@id='add-to-cart-button-wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "254afa1a-9f2e-47af-b5cd-4c9eb638b980",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.css-dldxm2",
+      "targets": [
+        ["css=.css-dldxm2", "css:finder"],
+        ["xpath=//div[@id='add-to-cart-button-wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1362effd-4505-4025-b644-e55a005a88b4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-dldxm2",
+      "targets": [
+        ["css=.css-dldxm2", "css:finder"],
+        ["xpath=//div[@id='add-to-cart-button-wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "479f851e-0408-465c-bb01-1c033809e616",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.css-dldxm2",
+      "targets": [
+        ["css=.css-dldxm2", "css:finder"],
+        ["xpath=//div[@id='add-to-cart-button-wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ef4fbc2-a146-4c6f-8120-b7a7a67f83b3",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(4) > .css-dldxm2",
+      "targets": [
+        ["css=div:nth-child(4) > .css-dldxm2", "css:finder"],
+        ["xpath=//div[@id='atc-root']/div[3]/div[2]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "76baf748-ee15-45a4-990f-1908f03f3b9e",
+      "comment": "Verify items can be checked out",
+      "command": "//verifyElementPresent",
+      "target": "css=.css-dldxm2",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "953fe28f-21a1-4d73-9689-19db1d4649f7",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["04e4a084-64e9-48ed-aefb-26b287505e46"]
+  }, {
+    "id": "2d940ee9-2815-43b1-8cf2-0c8c47cadf76",
+    "name": "Pass",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["04e4a084-64e9-48ed-aefb-26b287505e46", "7a4d1a94-50b7-4fff-8493-2a65252ced43"]
+  }],
+  "urls": ["https://www.walmart.ca/"],
+  "plugins": []
+}
