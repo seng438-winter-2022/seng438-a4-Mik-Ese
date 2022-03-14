@@ -1,0 +1,590 @@
+{
+  "id": "6938c693-1923-4613-9d06-7a9690aed87e",
+  "version": "2.0",
+  "name": "SENG 438 A4",
+  "url": "https://www.sportchek.ca",
+  "tests": [{
+    "id": "6b0e0547-50ca-419f-a1cd-0b571c8c0bd8",
+    "name": "Change to different store",
+    "commands": [{
+      "id": "4f44dfaf-73e1-41cc-9ae7-d085edd7270c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f3d237a2-864e-4769-9271-59e0a5423513",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "549x682",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8c13b11-30e5-4d8d-aeb9-bfcebc44f7c0",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Sport Chek",
+      "targets": [
+        ["linkText=Sport Chek", "linkText"],
+        ["css=.header-logo__image", "css:finder"],
+        ["xpath=//a[contains(text(),'Sport Chek')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/')])[6]", "xpath:href"],
+        ["xpath=//header/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c317e80b-f981-425a-8378-3a148453a3d2",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.header-pickup-store__choose_second",
+      "targets": [
+        ["css=.header-pickup-store__choose_second", "css:finder"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a/span[4]", "xpath:idRelative"],
+        ["xpath=//a/span[4]", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "63b0630e-d1d8-4906-9c3d-47839830d351",
+      "comment": "",
+      "command": "click",
+      "target": "id=headerPickupStoreTitle",
+      "targets": [
+        ["id=headerPickupStoreTitle", "id"],
+        ["css=#headerPickupStoreTitle", "css:finder"],
+        ["xpath=//span[@id='headerPickupStoreTitle']", "xpath:attributes"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a/span[2]", "xpath:idRelative"],
+        ["xpath=//a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Your Store:')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "13258667-81f7-4481-b80d-346bd8239304",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pickup-store-list__item:nth-child(2) > .pickup-store-list__default-store",
+      "targets": [
+        ["css=.pickup-store-list__item:nth-child(2) > .pickup-store-list__default-store", "css:finder"],
+        ["xpath=//a[contains(text(),'Set as my store')]", "xpath:link"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section[3]/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b33d6b83-6ce2-4802-9205-efebba580544",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=.header-pickup-store__choose_second",
+      "targets": [
+        ["css=.header-pickup-store__choose_second", "css:finder"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a/span[4]", "xpath:idRelative"],
+        ["xpath=//a/span[4]", "xpath:position"]
+      ],
+      "value": "${a}"
+    }, {
+      "id": "388a4a68-0937-4371-a7bc-3b8591d9fbbf",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a6081fa5-6dd7-4b1e-bba5-15d5d0182a37",
+    "name": "Find Edmonton stores",
+    "commands": [{
+      "id": "d3083238-7767-4194-8839-4bf59462713d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "020ab253-bb07-4936-a444-e4456c47c8c7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "566x735",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7a74d2f-5ed0-49dd-b444-7b9d124d2970",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.header-cart__text",
+      "targets": [
+        ["css=.header-cart__text", "css:finder"],
+        ["xpath=//div[6]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6575786f-4644-4142-b2e1-73cd2d1ac9dc",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.header-cart__text",
+      "targets": [
+        ["css=.header-cart__text", "css:finder"],
+        ["xpath=//div[6]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1dc3d9f7-8d45-4a9b-b9ed-f920b9cb9b44",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.header-pickup-store__link-container",
+      "targets": [
+        ["css=.header-pickup-store__link-container", "css:finder"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[6]", "xpath:href"],
+        ["xpath=//div[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Your Store:\nWestbrook Mall Sport Chek')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "12889570-7b61-4f6e-84cc-3a15591c39f7",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.header-pickup-store__link-container",
+      "targets": [
+        ["css=.header-pickup-store__link-container", "css:finder"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[6]", "xpath:href"],
+        ["xpath=//div[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Your Store:\nWestbrook Mall Sport Chek')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "08836a00-bf1a-48fa-9440-b5e121f14f55",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.header-pickup-store__choose_second",
+      "targets": [
+        ["css=.header-pickup-store__choose_second", "css:finder"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a/span[4]", "xpath:idRelative"],
+        ["xpath=//a/span[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "65844192-2c3f-49a9-a1ea-e34d42791ec2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-pickup-store__choose_second",
+      "targets": [
+        ["css=.header-pickup-store__choose_second", "css:finder"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a/span[4]", "xpath:idRelative"],
+        ["xpath=//a/span[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b1c9324-2913-4ef0-a55a-25133e5ca218",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.header-pickup-store__choose_second",
+      "targets": [
+        ["css=.header-pickup-store__choose_second", "css:finder"],
+        ["xpath=//div[@id='header-pickup-store-widget']/a/span[4]", "xpath:idRelative"],
+        ["xpath=//a/span[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f9a64e8-efde-4209-8caa-35ab7bc4d701",
+      "comment": "",
+      "command": "click",
+      "target": "id=pickup-modal-choose__input",
+      "targets": [
+        ["id=pickup-modal-choose__input", "id"],
+        ["name=location", "name"],
+        ["css=#pickup-modal-choose__input", "css:finder"],
+        ["xpath=//input[@id='pickup-modal-choose__input']", "xpath:attributes"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "efb7d61a-c699-459f-9ba4-c6ade746ecb9",
+      "comment": "",
+      "command": "click",
+      "target": "id=pickup-modal-choose__input",
+      "targets": [
+        ["id=pickup-modal-choose__input", "id"],
+        ["name=location", "name"],
+        ["css=#pickup-modal-choose__input", "css:finder"],
+        ["xpath=//input[@id='pickup-modal-choose__input']", "xpath:attributes"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d525842d-458b-42fd-9761-acd923c0f80a",
+      "comment": "",
+      "command": "click",
+      "target": "id=pickup-modal-choose__input",
+      "targets": [
+        ["id=pickup-modal-choose__input", "id"],
+        ["name=location", "name"],
+        ["css=#pickup-modal-choose__input", "css:finder"],
+        ["xpath=//input[@id='pickup-modal-choose__input']", "xpath:attributes"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e60d8cf-44bc-49c2-b3c9-51e4365f6b68",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=pickup-modal-choose__input",
+      "targets": [
+        ["id=pickup-modal-choose__input", "id"],
+        ["name=location", "name"],
+        ["css=#pickup-modal-choose__input", "css:finder"],
+        ["xpath=//input[@id='pickup-modal-choose__input']", "xpath:attributes"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "72ee45de-3214-4aa4-8e7f-6a8807ba2a80",
+      "comment": "",
+      "command": "click",
+      "target": "id=pickup-modal-choose__input",
+      "targets": [
+        ["id=pickup-modal-choose__input", "id"],
+        ["name=location", "name"],
+        ["css=#pickup-modal-choose__input", "css:finder"],
+        ["xpath=//input[@id='pickup-modal-choose__input']", "xpath:attributes"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94eb9812-bbc0-45f1-8cc7-a53a446ce8e0",
+      "comment": "",
+      "command": "type",
+      "target": "id=pickup-modal-choose__input",
+      "targets": [
+        ["id=pickup-modal-choose__input", "id"],
+        ["name=location", "name"],
+        ["css=#pickup-modal-choose__input", "css:finder"],
+        ["xpath=//input[@id='pickup-modal-choose__input']", "xpath:attributes"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "edmonton"
+    }, {
+      "id": "1b553bf5-1bdd-4158-91bb-ed96c022c170",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=pickup-modal-choose__input",
+      "targets": [
+        ["id=pickup-modal-choose__input", "id"],
+        ["name=location", "name"],
+        ["css=#pickup-modal-choose__input", "css:finder"],
+        ["xpath=//input[@id='pickup-modal-choose__input']", "xpath:attributes"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "9583225d-8b89-4591-84c2-b402be12b8a8",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.pickup-modal-choose__summary-content",
+      "targets": [
+        ["css=.pickup-modal-choose__summary-content", "css:finder"],
+        ["xpath=//section[@id='pickup-store-modal']/form/div/section/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div", "xpath:position"]
+      ],
+      "value": "11 RESULTS FOR PICKUP LOCATIONS NEAR EDMONTON, AB WITHIN 40 KM"
+    }, {
+      "id": "a92f5970-de2a-49ca-950c-9805c71002ce",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "77ae56bd-ed5b-49e8-b755-c952e06875a8",
+    "name": "Email cannot be invalid",
+    "commands": [{
+      "id": "0294fe87-0e8e-46d4-9b2f-404dce6181f9",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d6247f7-0935-4af3-9b9d-eccd992c617b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1419x1055",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d176bc1d-37d0-43f4-b1ac-def9b139476a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.enterprise-account__button_register",
+      "targets": [
+        ["css=.enterprise-account__button_register", "css:finder"],
+        ["xpath=//li[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "343c0dd1-b4f3-4e58-a929-942980d8ab07",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.enterprise-account__button_register",
+      "targets": [
+        ["css=.enterprise-account__button_register", "css:finder"],
+        ["xpath=//li[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8dfb05e-6810-4a98-b198-49b17e5a299c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.enterprise-header__section:nth-child(3) a:nth-child(1) > font",
+      "targets": [
+        ["css=.enterprise-header__section:nth-child(3) a:nth-child(1) > font", "css:finder"],
+        ["xpath=//div[3]/div/div/a/font", "xpath:position"],
+        ["xpath=//font[contains(.,'Sign Up For Our Mailing List To Get 10% Off!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a6f5b45-9d7a-468a-b35a-64de489f1802",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.sign-up__input-wrapper:nth-child(2) .label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//form[@id='sign-up-form']/div/label/div/input", "xpath:idRelative"],
+        ["xpath=//label/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "de00d239-934f-4a02-8669-3f9884d94788",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.sign-up__input-wrapper:nth-child(2) .label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//form[@id='sign-up-form']/div/label/div/input", "xpath:idRelative"],
+        ["xpath=//label/div/input", "xpath:position"]
+      ],
+      "value": "abc"
+    }, {
+      "id": "3b4d0c64-1b02-4da7-a0ed-c914ad874e08",
+      "comment": "",
+      "command": "click",
+      "target": "name=postalCode",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.sign-up__input-wrapper:nth-child(2) .label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//form[@id='sign-up-form']/div/label/div/input", "xpath:idRelative"],
+        ["xpath=//label/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e116b65-fd61-4bfe-abd9-560f1dccd742",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.validation-error_show",
+      "targets": [
+        ["css=.validation-error_show", "css:finder"],
+        ["xpath=//form[@id='sign-up-form']/div/label/div/span", "xpath:idRelative"],
+        ["xpath=//label/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Please enter your email address in this format: name@example.com')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "17a01354-560b-4921-bca4-2eda73726bcf",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.validation-error_show",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "5092faca-86f7-4bcf-8b5d-99522a6978f2",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "3d923c1d-5e28-46f6-b9a9-5d73c32682b5",
+    "name": "Required fields must be completed",
+    "commands": [{
+      "id": "43152a40-2f8b-46cd-ae12-58dbe3b0a431",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7720fda5-4411-4433-88fa-d92690cc95f5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1419x1055",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "caf556b0-0256-4a54-a96c-fd4aaf713305",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Footwear",
+      "targets": [
+        ["linkText=Footwear", "linkText"],
+        ["css=.page-nav__item:nth-child(6) > .page-nav__link", "css:finder"],
+        ["xpath=//a[contains(@href, 'categories/shoes')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Footwear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c2abd58-6bc7-4355-9a2d-6151b3262518",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.enterprise-header__section:nth-child(2) font",
+      "targets": [
+        ["css=.enterprise-header__section:nth-child(2) font", "css:finder"],
+        ["xpath=//div[2]/div/div/a/font", "xpath:position"],
+        ["xpath=//font[contains(.,'Triangle Rewards')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad638b91-db55-451f-bde7-e04a911213c8",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.enterprise-header__section:nth-child(2) font",
+      "targets": [
+        ["css=.enterprise-header__section:nth-child(2) font", "css:finder"],
+        ["xpath=//div[2]/div/div/a/font", "xpath:position"],
+        ["xpath=//font[contains(.,'Triangle Rewards')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a8d5a11-f14c-4841-b4ae-e1e5bf0a53a8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.enterprise-header__section:nth-child(3) a:nth-child(1) > font",
+      "targets": [
+        ["css=.enterprise-header__section:nth-child(3) a:nth-child(1) > font", "css:finder"],
+        ["xpath=//div[3]/div/div/a/font", "xpath:position"],
+        ["xpath=//font[contains(.,'Sign Up For Our Mailing List To Get 10% Off!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "147c9435-fc4a-4d57-9973-06cf8384928e",
+      "comment": "",
+      "command": "assertNotEditable",
+      "target": "css=.sign-up__submit",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "a04efc06-b25d-49f9-a325-2c3f57ca0db4",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.sign-up__input-wrapper:nth-child(2) .label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//form[@id='sign-up-form']/div/label/div/input", "xpath:idRelative"],
+        ["xpath=//label/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5332f850-0d51-4d1a-92ee-9f9b28b89473",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.sign-up__input-wrapper:nth-child(2) .label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//form[@id='sign-up-form']/div/label/div/input", "xpath:idRelative"],
+        ["xpath=//label/div/input", "xpath:position"]
+      ],
+      "value": "cheyenne.goh1@ucalgary.ca"
+    }, {
+      "id": "78eb381c-78e7-4581-80a2-658f91da8956",
+      "comment": "",
+      "command": "click",
+      "target": "name=postalCode",
+      "targets": [
+        ["name=postalCode", "name"],
+        ["css=.sign-up__input-wrapper:nth-child(3) .label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='postalCode']", "xpath:attributes"],
+        ["xpath=//form[@id='sign-up-form']/div[2]/label/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/label/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a26f6da-6293-4dab-adea-8b33060071ee",
+      "comment": "",
+      "command": "type",
+      "target": "name=postalCode",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.sign-up__input-wrapper:nth-child(2) .label-set__text-field", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//form[@id='sign-up-form']/div/label/div/input", "xpath:idRelative"],
+        ["xpath=//label/div/input", "xpath:position"]
+      ],
+      "value": "T2N1N4"
+    }, {
+      "id": "73d91c3a-9dfe-41f5-95c1-ce853ebf12e9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.checkbox",
+      "targets": [
+        ["css=.checkbox", "css:finder"],
+        ["xpath=//form[@id='sign-up-form']/div[5]/label/span[2]", "xpath:idRelative"],
+        ["xpath=//div[5]/label/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0549e0fb-5b26-419e-9908-c342554271fa",
+      "comment": "",
+      "command": "assertEditable",
+      "target": "css=.sign-up__submit",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "fc02adc8-8550-40ad-9ba3-44d48001159a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "12cd4274-376a-449d-ba73-43a94abd51da",
+    "name": "Change Store",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6b0e0547-50ca-419f-a1cd-0b571c8c0bd8", "a6081fa5-6dd7-4b1e-bba5-15d5d0182a37"]
+  }, {
+    "id": "340eafe6-f82e-42b2-9f09-6037f9ba262f",
+    "name": "Sign up for Mailing List",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.sportchek.ca/"],
+  "plugins": []
+}

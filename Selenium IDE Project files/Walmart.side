@@ -1,0 +1,975 @@
+{
+  "id": "7d8663d2-ddf5-41a0-afb1-64b60424c824",
+  "version": "2.0",
+  "name": "SENG438 A4 GUI Tests - Walmart ",
+  "url": "https://www.walmart.ca",
+  "tests": [{
+    "id": "04e4a084-64e9-48ed-aefb-26b287505e46",
+    "name": "Test 1 - Check Deals",
+    "commands": [{
+      "id": "37963d49-2751-4ff3-9320-d9394d09f280",
+      "comment": "",
+      "command": "open",
+      "target": "/en",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ee4a378-f440-4e86-8b98-8b2826b8afe6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1550x838",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9415fafa-e4b4-40b6-8a78-76f421e7c2bd",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=Deals",
+      "targets": [
+        ["linkText=Deals", "linkText"],
+        ["css=.css-1n3j5qu:nth-child(5) > .e8z2aj22", "css:finder"],
+        ["xpath=//a[contains(text(),'Deals')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/cp/shop/deals/6000203002145?icid=homepage_HP_TopCategory_Deals_WM')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Deals')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd428832-5876-4543-8ebf-0d0208000daf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Deals",
+      "targets": [
+        ["linkText=Deals", "linkText"],
+        ["css=.css-1n3j5qu:nth-child(5) > .e8z2aj22", "css:finder"],
+        ["xpath=//a[contains(text(),'Deals')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/cp/shop/deals/6000203002145?icid=homepage_HP_TopCategory_Deals_WM')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Deals')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d567971-bd53-4abe-aaf7-334332d8abf4",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#freeZone3 button",
+      "targets": [
+        ["css=#freeZone3 button", "css:finder"],
+        ["xpath=//div[@id='freeZone3']/div/p/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Shop all')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2f98d3a-5c4c-4b12-91b0-3f2566e853aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=#freeZone3 button",
+      "targets": [
+        ["css=#freeZone3 button", "css:finder"],
+        ["xpath=//div[@id='freeZone3']/div/p/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Shop all')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "caab44bb-b245-48e2-9833-cacbdc677910",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(4) .css-gxbcya",
+      "targets": [
+        ["css=div:nth-child(4) .css-gxbcya", "css:finder"],
+        ["xpath=//img[@alt='Puredown® Feather & Down Pillow Set of 2']", "xpath:img"],
+        ["xpath=//div[@id='product-results']/div[4]/div/a/div/div/img", "xpath:idRelative"],
+        ["xpath=//div[4]/div/a/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "463e629f-9a4c-47c9-8638-fe8f96842e61",
+    "name": "Test 3 - Add item from flyer to cart",
+    "commands": [{
+      "id": "e6dd98ed-6700-45a1-a22b-6432afba4390",
+      "comment": "",
+      "command": "open",
+      "target": "/en",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0fab0f86-38d9-45da-bf36-99cf6f02afb2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1550x838",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a2adfe0-d92a-4368-9072-b2246de8481a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.e18kvv91",
+      "targets": [
+        ["css=.e18kvv91", "css:finder"],
+        ["xpath=//div[3]/a/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c49a870f-51b5-4999-af16-b64439086cd5",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=3",
+      "targets": [
+        ["index=3"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5c2ea98-6ce0-4437-843c-ad00875b5815",
+      "comment": "",
+      "command": "click",
+      "target": "css=.i18n_en:nth-child(2) > #other_flyer_runs .flyer_run_776023:nth-child(1) a:nth-child(1)",
+      "targets": [
+        ["css=.i18n_en:nth-child(2) > #other_flyer_runs .flyer_run_776023:nth-child(1) a:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='other_flyer_runs']/div/div/div/div[2]/table/tbody/tr/td[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/flyers/walmartcanada-groceryflyer?flyer_run_id=776023&locale=en&postal_code=T3G5T4&store_code=5726&type=2')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb80a315-1391-4a56-8dd5-1b34082660d1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.wishabi-itemdetaillayer-fake-layer",
+      "targets": [
+        ["css=.wishabi-itemdetaillayer-fake-layer", "css:finder"],
+        ["xpath=//div[@id='flyerCarousel']/div[10]/div/div[3]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[10]/div/div[3]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f294198-0897-4200-bea5-489f5bd7375c",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [
+        ["relative=parent"]
+      ],
+      "value": ""
+    }, {
+      "id": "52b9b89c-bdf5-4996-b5a3-5c77784638b0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-vfxkzw",
+      "targets": [
+        ["css=.css-vfxkzw", "css:finder"],
+        ["xpath=//div[@id='modal-root']/div/div/div/div/div[2]/div[3]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "49ac6cb5-6aa5-4865-aec5-9cff26bbd13f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-vfxkzw",
+      "targets": [
+        ["css=.css-vfxkzw", "css:finder"],
+        ["xpath=//div[@id='atc-root']/div[3]/div[2]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b954c0a-05f7-44b7-b157-80c8f19cc0f3",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#\\32 06658 .e5qqw234",
+      "targets": [
+        ["css=#\\32 06658 .e5qqw234", "css:finder"],
+        ["xpath=//div[@id='206658']/div[2]/div[2]/div/div/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div[2]/div[2]/div/div/div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ad03879-163d-4162-acc4-ef528d126f49",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Kellogg's Nutri-Grain Cereal Bars 295g - Strawberry, 8 bars",
+      "targets": [
+        ["linkText=Kellogg's Nutri-Grain Cereal Bars 295g - Strawberry, 8 bars", "linkText"],
+        ["css=#\\32 06658 .ennws581", "css:finder"],
+        ["xpath=//div[@id='206658']/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/en/ip/kelloggs-nutri-grain-cereal-bars-295g-strawberry-8-bars/6000016941487')]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "47fef343-0892-4295-aa9b-fd3a1342dd56",
+    "name": "Test 4 - Shop groceries online",
+    "commands": [{
+      "id": "cd7b7be7-c508-4dfa-b398-1e82277fc0f9",
+      "comment": "",
+      "command": "open",
+      "target": "/en",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a12055c9-63ff-4652-be0b-c8acfd7f4fa6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1550x838",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68848ee1-a044-45e5-a3cf-6f2df867ba03",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.en07u8q1",
+      "targets": [
+        ["css=.en07u8q1", "css:finder"],
+        ["xpath=//div[2]/a/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97489c7b-9c17-45b1-9a6b-f7bca0ae9f6d",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.en07u8q1",
+      "targets": [
+        ["css=.en07u8q1", "css:finder"],
+        ["xpath=//div[2]/a/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2943b458-65cd-4421-8582-92754ab864e1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-163mxh4 > .css-1f9gjts",
+      "targets": [
+        ["css=.css-163mxh4 > .css-1f9gjts", "css:finder"],
+        ["xpath=//div[@id='home-page']/div/div/div/div[3]/div/div/a/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "539ff166-cb31-45e1-9418-b28a2f8c92ba",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.css-ktyipj",
+      "targets": [
+        ["css=.css-ktyipj", "css:finder"],
+        ["xpath=//div[@id='modal-root']/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "15d55f09-2fd3-4880-a81b-6fcfed7ce3ff",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-ktyipj",
+      "targets": [
+        ["css=.css-ktyipj", "css:finder"],
+        ["xpath=//div[@id='modal-root']/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e915ce5-59ab-4cf3-8b14-b6eb557067dc",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,83.19999694824219)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a4ba152-0cb9-4e8c-8d47-11b285b18c29",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,688)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf2c6d82-c3c0-4cef-8961-80fbaf97b111",
+      "comment": "",
+      "command": "click",
+      "target": "css=#\\33PjbWlBR img",
+      "targets": [
+        ["css=#\\33PjbWlBR img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://i5.walmartimages.com/dfw/8822aef6-de97/k2-_2724272c-b617-42d2-bec1-6000bd4d7d54.v1.jpg')]", "xpath:img"],
+        ["xpath=//a[@id='3PjbWlBR']/div/img", "xpath:idRelative"],
+        ["xpath=//a[2]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3140c09-63f9-4a2d-8935-a8d992351f09",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#UnetNw3C img",
+      "targets": [
+        ["css=#UnetNw3C img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://i5.walmartimages.com/dfw/8822aef6-8e5f/k2-_5796505c-2828-478c-9bbb-92d50a454034.v1.jpg')]", "xpath:img"],
+        ["xpath=//a[@id='UnetNw3C']/div/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b07d14d-5f4f-41d8-862a-3ba541ddec48",
+      "comment": "",
+      "command": "click",
+      "target": "css=#UnetNw3C img",
+      "targets": [
+        ["css=#UnetNw3C img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://i5.walmartimages.com/dfw/8822aef6-8e5f/k2-_5796505c-2828-478c-9bbb-92d50a454034.v1.jpg')]", "xpath:img"],
+        ["xpath=//a[@id='UnetNw3C']/div/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55188ef2-496c-4b52-bf16-593ae2ba2ea6",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,210.39999389648438)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "efa81472-291d-4576-8d32-3a280837349c",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(1) > .css-7s8ndg .css-gxbcya",
+      "targets": [
+        ["css=div:nth-child(1) > .css-7s8ndg .css-gxbcya", "css:finder"],
+        ["xpath=//img[@alt='Dairyland 2% Partly Skimmed Milk']", "xpath:img"],
+        ["xpath=//div[@id='product-results']/div/div/a/div/div/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05aa7710-726b-4d02-8da1-23d3553d8007",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,316.79998779296875)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6673bcf3-b314-42e7-9196-b531b79fcd19",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,211.1999969482422)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "325c5fda-e30e-4c6f-a4b4-1d7b77eb8639",
+      "comment": "",
+      "command": "click",
+      "target": "css=#add-to-cart-button-wrapper > .css-dldxm2",
+      "targets": [
+        ["css=#add-to-cart-button-wrapper > .css-dldxm2", "css:finder"],
+        ["xpath=//div[@id='add-to-cart-button-wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c0abad0-0ca0-4e0e-a6ff-c53a65a5a0e6",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=div:nth-child(4) > .css-dldxm2",
+      "targets": [
+        ["css=div:nth-child(4) > .css-dldxm2", "css:finder"],
+        ["xpath=//div[@id='atc-root']/div[3]/div[2]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4984331f-9a30-4368-a4b7-1f38ea619e7b",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=div:nth-child(4) > .css-dldxm2",
+      "targets": [
+        ["css=div:nth-child(4) > .css-dldxm2", "css:finder"],
+        ["xpath=//div[@id='atc-root']/div[3]/div[2]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "92918189-0f28-449e-b238-5cb941e82dae",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-2ze04u",
+      "targets": [
+        ["css=.css-2ze04u", "css:finder"],
+        ["xpath=//div[@id='atc-root']/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue Shopping')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "721747ae-bf2e-4b8f-b57a-a106c10a73fd",
+      "comment": "",
+      "command": "click",
+      "target": "css=#add-to-cart-button-wrapper > .css-dldxm2",
+      "targets": [
+        ["css=#add-to-cart-button-wrapper > .css-dldxm2", "css:finder"],
+        ["xpath=//div[@id='add-to-cart-button-wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b2dc97f-c484-46cd-a129-e2716ab8d70c",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(4) > .css-dldxm2",
+      "targets": [
+        ["css=div:nth-child(4) > .css-dldxm2", "css:finder"],
+        ["xpath=//div[@id='atc-root']/div[3]/div[2]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "94613bda-78d8-4630-a07c-784d52995f15",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=View available times.",
+      "targets": [
+        ["linkText=View available times.", "linkText"],
+        ["css=.css-peqszk", "css:finder"],
+        ["xpath=//a[contains(text(),'View available times.')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/en/scheduled-shopping')])[2]", "xpath:href"],
+        ["xpath=//div[3]/div[2]/div/div[2]/div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'View available times.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "2e7365a9-4157-4311-9921-ffdbfe7ea621",
+    "name": "Test 2 - Add item from Electronics department to cart",
+    "commands": [{
+      "id": "91374503-53e8-4cef-8e18-c98016fa3cd5",
+      "comment": "",
+      "command": "open",
+      "target": "/en",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "438a4345-6e3c-498a-a202-1b3334c08bc3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1800x1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eaeeaceb-d1ad-4e46-8d7b-fe3951ff069c",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=departments-button",
+      "targets": [
+        ["id=departments-button", "id"],
+        ["linkText=Departments", "linkText"],
+        ["css=#departments-button", "css:finder"],
+        ["xpath=//a[@id='departments-button']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Departments')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "350ec814-0ac5-4bad-a1e1-24e7a9f92900",
+      "comment": "",
+      "command": "click",
+      "target": "id=departments-button",
+      "targets": [
+        ["id=departments-button", "id"],
+        ["linkText=Departments", "linkText"],
+        ["css=#departments-button", "css:finder"],
+        ["xpath=//a[@id='departments-button']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Departments')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "452f4d8d-749a-42a1-bd25-4e5926d86ecb",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.css-163mxh4 > .css-1f9gjts",
+      "targets": [
+        ["css=.css-163mxh4 > .css-1f9gjts", "css:finder"],
+        ["xpath=//div[@id='home-page']/div/div/div/div[3]/div/div/a/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dacc234d-c167-4dbf-885a-2c0c9289d4db",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=1",
+      "targets": [
+        ["id=1", "id"],
+        ["linkText=Automotive", "linkText"],
+        ["css=#\\31", "css:finder"],
+        ["xpath=//a[contains(text(),'Automotive')]", "xpath:link"],
+        ["xpath=//a[@id='1']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/browse/automotive/10016')]", "xpath:href"],
+        ["xpath=//div[3]/div/div[2]/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Automotive')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "90f3bd14-a845-4001-bb0e-502c119218d0",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=3",
+      "targets": [
+        ["id=3", "id"],
+        ["linkText=Clothing, shoes & accessories", "linkText"],
+        ["css=#\\33", "css:finder"],
+        ["xpath=//a[contains(text(),'Clothing, shoes & accessories')]", "xpath:link"],
+        ["xpath=//a[@id='3']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/browse/clothing-shoes-accessories/10017')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Clothing, shoes & accessories')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8c3f74f-9a96-4701-9cdb-7f53175283a0",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=4",
+      "targets": [
+        ["id=4", "id"],
+        ["linkText=Electronics", "linkText"],
+        ["css=#\\34", "css:finder"],
+        ["xpath=//a[contains(text(),'Electronics')]", "xpath:link"],
+        ["xpath=//a[@id='4']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/browse/electronics/10003')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Electronics')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7fba69ef-2502-4e77-8320-4230dc33ad3e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=4",
+      "targets": [
+        ["id=4", "id"],
+        ["linkText=Electronics", "linkText"],
+        ["css=#\\34", "css:finder"],
+        ["xpath=//a[contains(text(),'Electronics')]", "xpath:link"],
+        ["xpath=//a[@id='4']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/browse/electronics/10003')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Electronics')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c85d66c-3bc1-4160-9d45-04f4cae81619",
+      "comment": "",
+      "command": "click",
+      "target": "id=4",
+      "targets": [
+        ["id=4", "id"],
+        ["linkText=Electronics", "linkText"],
+        ["css=#\\34", "css:finder"],
+        ["xpath=//a[contains(text(),'Electronics')]", "xpath:link"],
+        ["xpath=//a[@id='4']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/browse/electronics/10003')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Electronics')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ade5b78-c82f-45cd-b1d3-3b2f5e55c3eb",
+      "comment": "",
+      "command": "click",
+      "target": "css=#tDMKW-iK img",
+      "targets": [
+        ["css=#tDMKW-iK img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://i5.walmartimages.com/dfw/8822aef6-902d/k2-_a29f30d4-f038-4ecc-aef4-59d067163988.v1.jpg')]", "xpath:img"],
+        ["xpath=//a[@id='tDMKW-iK']/div/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c403f627-cd76-4a8e-a235-0092d1b5568f",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#vMWCij9C img",
+      "targets": [
+        ["css=#vMWCij9C img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://i5.walmartimages.com/dfw/8822aef6-bf53/k2-_b3b44093-bcae-4b20-912a-91cf0f725d51.v1.jpg')]", "xpath:img"],
+        ["xpath=//a[@id='vMWCij9C']/div/img", "xpath:idRelative"],
+        ["xpath=//a[3]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed7211b1-5bf1-46d5-82df-d7fbc15fbe90",
+      "comment": "",
+      "command": "click",
+      "target": "css=#vMWCij9C img",
+      "targets": [
+        ["css=#vMWCij9C img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://i5.walmartimages.com/dfw/8822aef6-bf53/k2-_b3b44093-bcae-4b20-912a-91cf0f725d51.v1.jpg')]", "xpath:img"],
+        ["xpath=//a[@id='vMWCij9C']/div/img", "xpath:idRelative"],
+        ["xpath=//a[3]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f5103f3-2889-4710-9fbf-0d881664439e",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#si2YCxSQ img",
+      "targets": [
+        ["css=#si2YCxSQ img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://i5.walmartimages.com/dfw/8822aef6-492b/k2-_688989de-01cb-4fe8-91b7-e548c7f60268.v1.png')]", "xpath:img"],
+        ["xpath=//a[@id='si2YCxSQ']/div/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0750ed75-9723-4825-b258-aaa003add2ad",
+      "comment": "",
+      "command": "click",
+      "target": "css=#si2YCxSQ img",
+      "targets": [
+        ["css=#si2YCxSQ img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://i5.walmartimages.com/dfw/8822aef6-492b/k2-_688989de-01cb-4fe8-91b7-e548c7f60268.v1.png')]", "xpath:img"],
+        ["xpath=//a[@id='si2YCxSQ']/div/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "32a98bee-364d-4558-89be-2a6dbd0912b8",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(1) > .css-1fnwt3w .css-gxbcya",
+      "targets": [
+        ["css=div:nth-child(1) > .css-1fnwt3w .css-gxbcya", "css:finder"],
+        ["xpath=//img[@alt='Philips 75\" 4K UHD HDR10 LED Android Smart TV, 75PFL5704/F7']", "xpath:img"],
+        ["xpath=//div[@id='product-results']/div/div/a/div/div/img", "xpath:idRelative"],
+        ["xpath=//a/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a49580ba-1f61-405e-a4c9-e28f9d20c893",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.css-vfxkzw",
+      "targets": [
+        ["css=.css-vfxkzw", "css:finder"],
+        ["xpath=//div[@id='add-to-cart-button-wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e20b5873-a4cf-4952-ae46-faa47ecc174f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.css-vfxkzw",
+      "targets": [
+        ["css=.css-vfxkzw", "css:finder"],
+        ["xpath=//div[@id='add-to-cart-button-wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a1c7fdc-1128-4a6e-91b3-48a81faf4d90",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.e5qqw234",
+      "targets": [
+        ["css=.e5qqw234", "css:finder"],
+        ["xpath=//div[2]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'+')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2058d745-1b02-4535-8a1b-2e785826eae1",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.e5qqw234",
+      "targets": [
+        ["css=.e5qqw234", "css:finder"],
+        ["xpath=//div[2]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'+')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "05b3d85e-f36e-4495-b226-93344be11c9c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.css-vfxkzw",
+      "targets": [
+        ["css=.css-vfxkzw", "css:finder"],
+        ["xpath=//div[@id='add-to-cart-button-wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6e61bcd-eddb-4f75-8705-eafa848341b5",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#add-to-cart-button-wrapper > .css-vfxkzw",
+      "targets": [
+        ["css=#add-to-cart-button-wrapper > .css-vfxkzw", "css:finder"],
+        ["xpath=//div[@id='add-to-cart-button-wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fdb88e3a-a054-4957-ba06-3a8d6baa6557",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#add-to-cart-button-wrapper > .css-vfxkzw",
+      "targets": [
+        ["css=#add-to-cart-button-wrapper > .css-vfxkzw", "css:finder"],
+        ["xpath=//div[@id='add-to-cart-button-wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f7833f8-9e79-4907-92eb-a893107ec089",
+      "comment": "",
+      "command": "click",
+      "target": "css=#add-to-cart-button-wrapper > .css-vfxkzw",
+      "targets": [
+        ["css=#add-to-cart-button-wrapper > .css-vfxkzw", "css:finder"],
+        ["xpath=//div[@id='add-to-cart-button-wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a482b97d-b23d-4c2a-bf32-83958d499c11",
+      "comment": "",
+      "command": "click",
+      "target": "css=.e1xljmbw3",
+      "targets": [
+        ["css=.e1xljmbw3", "css:finder"],
+        ["xpath=//button[@type='rounded']", "xpath:attributes"],
+        ["xpath=//div[@id='modal-root']/div/div/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'OK, got it!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f1d5efb-1c8d-4966-bd33-853fc647aab0",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=div:nth-child(4) > .css-vfxkzw",
+      "targets": [
+        ["css=div:nth-child(4) > .css-vfxkzw", "css:finder"],
+        ["xpath=//div[@id='atc-root']/div[3]/div[2]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "990b7c40-d1cd-43a0-a11e-d364bc1ccb4e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=div:nth-child(4) > .css-vfxkzw",
+      "targets": [
+        ["css=div:nth-child(4) > .css-vfxkzw", "css:finder"],
+        ["xpath=//div[@id='atc-root']/div[3]/div[2]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c7e3bb7-251b-4893-9da2-ca687877a709",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=div:nth-child(4) > .css-vfxkzw",
+      "targets": [
+        ["css=div:nth-child(4) > .css-vfxkzw", "css:finder"],
+        ["xpath=//div[@id='atc-root']/div[3]/div[2]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "98a0bac4-24b0-4cd6-beae-b17e29db785c",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(4) > .css-vfxkzw",
+      "targets": [
+        ["css=div:nth-child(4) > .css-vfxkzw", "css:finder"],
+        ["xpath=//div[@id='atc-root']/div[3]/div[2]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc03df46-a558-4c21-8ac3-89608ebffe30",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.css-1w2as9k",
+      "targets": [
+        ["css=.css-1w2as9k", "css:finder"],
+        ["xpath=//div[@id='10183990']/div[2]/div[2]/div/div/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div/div[2]/div[2]/div/div/div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "7a4d1a94-50b7-4fff-8493-2a65252ced43",
+    "name": "Test 5 - Add multisave item to cart",
+    "commands": [{
+      "id": "682157e1-1a45-4881-bf03-49c942613d35",
+      "comment": "",
+      "command": "open",
+      "target": "/en",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "edb876b9-bda7-4d40-86a6-754025e6d4ad",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1550x838",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4fb042ff-86f5-4b88-b29f-4ee25c2791b6",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=Multisaves",
+      "targets": [
+        ["linkText=Multisaves", "linkText"],
+        ["css=.css-1n3j5qu:nth-child(2) > .e8z2aj22", "css:finder"],
+        ["xpath=//a[contains(text(),'Multisaves')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/ce/grocery/multisaves/6441889253777?icid=homepage_HP_TopCategory_Multisave_WM')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Multisaves')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0377ac46-1a5f-4400-9ec2-c1ee73da46b7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Multisaves",
+      "targets": [
+        ["linkText=Multisaves", "linkText"],
+        ["css=.css-1n3j5qu:nth-child(2) > .e8z2aj22", "css:finder"],
+        ["xpath=//a[contains(text(),'Multisaves')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/ce/grocery/multisaves/6441889253777?icid=homepage_HP_TopCategory_Multisave_WM')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Multisaves')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "82c2d289-3111-4c51-b0d6-3eab6c345648",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=div:nth-child(1) > .css-7s8ndg .css-gxbcya",
+      "targets": [
+        ["css=div:nth-child(1) > .css-7s8ndg .css-gxbcya", "css:finder"],
+        ["xpath=//img[@alt='Kellogg’s Corn Pops Cereal 320g']", "xpath:img"],
+        ["xpath=//div[@id='product-results']/div/div/a/div/div/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0232d6b-519b-4d51-a5f4-89958e8ddff1",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(1) > .css-7s8ndg .css-gxbcya",
+      "targets": [
+        ["css=div:nth-child(1) > .css-7s8ndg .css-gxbcya", "css:finder"],
+        ["xpath=//img[@alt='Kellogg’s Corn Pops Cereal 320g']", "xpath:img"],
+        ["xpath=//div[@id='product-results']/div/div/a/div/div/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdedc2c7-1687-4df5-a66a-102e2ace21f0",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.css-dldxm2",
+      "targets": [
+        ["css=.css-dldxm2", "css:finder"],
+        ["xpath=//div[@id='add-to-cart-button-wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "254afa1a-9f2e-47af-b5cd-4c9eb638b980",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.css-dldxm2",
+      "targets": [
+        ["css=.css-dldxm2", "css:finder"],
+        ["xpath=//div[@id='add-to-cart-button-wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1362effd-4505-4025-b644-e55a005a88b4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-dldxm2",
+      "targets": [
+        ["css=.css-dldxm2", "css:finder"],
+        ["xpath=//div[@id='add-to-cart-button-wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "479f851e-0408-465c-bb01-1c033809e616",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.css-dldxm2",
+      "targets": [
+        ["css=.css-dldxm2", "css:finder"],
+        ["xpath=//div[@id='add-to-cart-button-wrapper']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ef4fbc2-a146-4c6f-8120-b7a7a67f83b3",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(4) > .css-dldxm2",
+      "targets": [
+        ["css=div:nth-child(4) > .css-dldxm2", "css:finder"],
+        ["xpath=//div[@id='atc-root']/div[3]/div[2]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "76baf748-ee15-45a4-990f-1908f03f3b9e",
+      "comment": "",
+      "command": "//verifyElementPresent",
+      "target": "css=.css-dldxm2",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "953fe28f-21a1-4d73-9689-19db1d4649f7",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["04e4a084-64e9-48ed-aefb-26b287505e46"]
+  }, {
+    "id": "2d940ee9-2815-43b1-8cf2-0c8c47cadf76",
+    "name": "Pass",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["04e4a084-64e9-48ed-aefb-26b287505e46", "7a4d1a94-50b7-4fff-8493-2a65252ced43"]
+  }],
+  "urls": ["https://www.walmart.ca/"],
+  "plugins": []
+}

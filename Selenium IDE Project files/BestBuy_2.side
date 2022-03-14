@@ -1,0 +1,369 @@
+{
+  "id": "46ce8647-d1ac-4982-9d67-8ec1a6337b67",
+  "version": "2.0",
+  "name": "SENG438 - BestBuy",
+  "url": "https://www.bestbuy.ca/en-ca",
+  "tests": [{
+    "id": "e067ab00-8600-4095-b2d3-5276aaf51d7b",
+    "name": "10 Stores in Calgary",
+    "commands": [{
+      "id": "a1623e29-dfc7-476f-bbbb-14d2a25e94f6",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.bestbuy.ca/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7da36a3-6027-495e-8357-c12898af4ab4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7681aabe-dd75-4cca-8810-7a54329c556f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.storesLabel_184Qo",
+      "targets": [
+        ["css=.storesLabel_184Qo", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div[2]/a/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win7242",
+      "windowTimeout": 10000
+    }, {
+      "id": "abf5f937-a93c-4c86-82a2-27e6088d56e6",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win7242}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69057360-b4ef-4b3f-8e72-88127f7e432f",
+      "comment": "",
+      "command": "click",
+      "target": "id=q",
+      "targets": [
+        ["id=q", "id"],
+        ["name=q", "name"],
+        ["css=#q", "css:finder"],
+        ["xpath=//input[@id='q']", "xpath:attributes"],
+        ["xpath=//form[@id='search-form']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d801ed3f-f6c1-4692-89ca-6350e93346e1",
+      "comment": "",
+      "command": "type",
+      "target": "id=q",
+      "targets": [
+        ["id=q", "id"],
+        ["name=q", "name"],
+        ["css=#q", "css:finder"],
+        ["xpath=//input[@id='q']", "xpath:attributes"],
+        ["xpath=//form[@id='search-form']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "Calgary, Alberta"
+    }, {
+      "id": "2ff7745e-a177-4446-b1d1-da3c73337182",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=q",
+      "targets": [
+        ["id=q", "id"],
+        ["name=q", "name"],
+        ["css=#q", "css:finder"],
+        ["xpath=//input[@id='q']", "xpath:attributes"],
+        ["xpath=//form[@id='search-form']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "${KEY_DOWN}"
+    }, {
+      "id": "ff4bd0bd-5662-4b3c-9306-db96d05f1299",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=q",
+      "targets": [
+        ["id=q", "id"],
+        ["name=q", "name"],
+        ["css=#q", "css:finder"],
+        ["xpath=//input[@id='q']", "xpath:attributes"],
+        ["xpath=//form[@id='search-form']/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "05117465-291d-403c-b3d9-96289dc25a1c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-search",
+      "targets": [
+        ["css=.icon-search", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f17e6f1-2f65-432d-a587-63739e01f904",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.ResultSummary",
+      "targets": [
+        ["css=.ResultSummary", "css:finder"],
+        ["xpath=//div[@id='js-locator']/div[2]/div[3]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div", "xpath:position"]
+      ],
+      "value": "10 locations near \"Calgary, AB\""
+    }, {
+      "id": "4a6ff39b-72ba-4202-afe6-11620f2a981c",
+      "comment": "Check closest store is \"Best Buy Hanson Square\"",
+      "command": "verifyText",
+      "target": "css=#js-yl-2656981 .Teaser-title",
+      "targets": [
+        ["css=#js-yl-2656981 .Teaser-title", "css:finder"],
+        ["xpath=//li[@id='js-yl-2656981']/article/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Best Buy Hanson Square')]", "xpath:innerText"]
+      ],
+      "value": "Best Buy Hanson Square"
+    }]
+  }, {
+    "id": "608fd3cd-6803-4efb-8cfb-612aca9930c3",
+    "name": "Add headphones to cart",
+    "commands": [{
+      "id": "ad5f7819-0ca7-47bb-b7d7-090fceb8c708",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.bestbuy.ca/en-ca",
+      "targets": [],
+      "value": "--privatebrowsing"
+    }, {
+      "id": "88b3af13-6012-40e7-90de-073cd3fbeffc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "45f43f76-59bc-46d4-9799-72e51ed2d474",
+      "comment": "",
+      "command": "click",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4bc5bfee-646c-48c4-a2e5-35199eeaf5c9",
+      "comment": "",
+      "command": "type",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "HyperX Cloud II"
+    }, {
+      "id": "bc230037-c985-4857-90ec-dd91720138d6",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.textField_XaJoz", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div/div[2]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "388f9076-e6b8-4f71-a0c3-3d5411e6947d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.searchIcon_18ax0",
+      "targets": [
+        ["css=.searchIcon_18ax0", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "965ebbe0-d767-4d83-9f6e-a9f1fd2c2370",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-12_198le:nth-child(1) .productItemName_3IZ3c",
+      "targets": [
+        ["css=.col-xs-12_198le:nth-child(1) .productItemName_3IZ3c", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/main/div/div[2]/div[2]/div[2]/ul/div/div/div/a/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//a/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c774e32a-7af8-4025-8bb1-ce6bcf7a14ab",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.addToCartButton_1op0t",
+      "targets": [
+        ["css=.addToCartButton_1op0t", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='test']/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "b82de341-92e8-48aa-a692-2254419cf5d6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.addToCartButton_1op0t",
+      "targets": [
+        ["css=.addToCartButton_1op0t", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='test']/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a298a68e-726d-47b1-a026-faba1fef7c33",
+      "comment": "Verify Item has been added to cart",
+      "command": "verifyText",
+      "target": "css=.contentContainer_1GQT- > p",
+      "targets": [
+        ["css=.contentContainer_1GQT- > p", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/div[2]/div/div/div/div/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'This item has been added to your cart.')]", "xpath:innerText"]
+      ],
+      "value": "This item has been added to your cart."
+    }]
+  }, {
+    "id": "ce2d6b4e-f622-45ff-a65b-c6e5758dcf18",
+    "name": "Washing Machines on Sale",
+    "commands": [{
+      "id": "33d06077-61f7-419a-81e3-e7f966d026f1",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.bestbuy.ca/en-ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bfd22471-f494-4426-b65a-ae401c775b21",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ec4677e-7f8a-4226-9aa1-cb6fd9877d6a",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(1) button > span",
+      "targets": [
+        ["css=li:nth-child(1) button > span", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li/div/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "07c836b1-cb1e-44ac-8d36-af396a6e28b3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Appliances",
+      "targets": [
+        ["linkText=Appliances", "linkText"],
+        ["css=.selected_3gnUn", "css:finder"],
+        ["xpath=//a[contains(text(),'Appliances')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div[4]/header/div/div/div[2]/div/div/div/div/div/ul/li/div/div[2]/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/en-ca/category/appliances/26517')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Appliances')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "85d36658-47d0-46c1-a660-16ed4d3f7891",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,212)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4121f0c3-e7e1-40a1-8e62-7e677fa060f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-xs-4_1EA1G:nth-child(3) .link_ldnKD",
+      "targets": [
+        ["css=.col-xs-4_1EA1G:nth-child(3) .link_ldnKD", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/main/div/div[2]/section[3]/div/div/div[3]/a/div/p", "xpath:idRelative"],
+        ["xpath=//div[3]/a/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Washing Machines')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "07f2067e-51af-47c5-9f85-8a13762823cb",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd7a4ce2-aa75-40bc-9f8c-bd263cc31dc5",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,933)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1ab4bbd5-87e8-48b4-a988-5eef02b3023b",
+      "comment": "",
+      "command": "click",
+      "target": "id=facetFilter-On Sale",
+      "targets": [
+        ["id=facetFilter-On Sale", "id"],
+        ["name=facetFilter-On Sale", "name"],
+        ["css=#facetFilter-On\\ Sale", "css:finder"],
+        ["xpath=//input[@id='facetFilter-On Sale']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/main/div/div[3]/div/div[2]/div[2]/div/div/div/li/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/li/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "585438e2-e63d-4e63-9ffe-06c60c134719",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74f4a295-bf93-49a5-b684-61b4e04533de",
+      "comment": "On Sale Tag is present",
+      "command": "verifyElementPresent",
+      "target": "css=.pill_2ra42",
+      "targets": [
+        ["css=.pill_2ra42", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/div/main/div/div[2]/div[2]/div[2]/ul/li", "xpath:idRelative"],
+        ["xpath=//main/div/div[2]/div[2]/div[2]/ul/li", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "78f0df35-2d4d-4231-a0c6-5ab784a1ca68",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e067ab00-8600-4095-b2d3-5276aaf51d7b"]
+  }],
+  "urls": ["https://www.bestbuy.ca/", "https://www.bestbuy.ca/en-ca"],
+  "plugins": []
+}
