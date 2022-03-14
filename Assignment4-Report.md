@@ -114,7 +114,7 @@ Some of the test classes were able to better find mutants than others. Comparing
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 
-Equivalent Mutant are when the source code is modified via mutant testing, but they do not change the original functionality of the program. This means that this mutant will produce correct outputs and will survive the mutant testing, but it is not a bug, as it is equivalent to the original code. This mutant is mainly found in loops, when there is a condition to check when to break out of the loop. This was found in line 104 in DataUtilities.java, for the function clone. What this means to the overall mutation score is that it is realistically impossible to get a 100% score, as loops are essential in many programs.
+Equivalent Mutant are when the source code is modified via mutant testing, but they do not change the original functionality of the program. This means that this mutant will produce correct outputs and will survive the mutant testing, but it is not a bug, as it is equivalent to the original code. This mutant is mainly found in loops, when there is a condition to check when to break out of the loop. This was found in line 104 in `DataUtilities.java`, for the method `clone`. What this means to the overall mutation score is that it is realistically unachievable to get a 100% score, as loops are essential in many programs.
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 
@@ -139,9 +139,31 @@ Our group used assertions to see if Selenium clicked the right part of the webpa
 
 # How did you test each functionaity with different test data
 
-Bestbuy - Search: We used different search results, such as headphones, phones and invalid
-Bestbuy - Shop dropdown: We used different links, such as Appliances and Computers, Tablets and Accessories
-Walmart - Adding items to cart: tried going to different departments and adding various items to the cart
+### BestBuy
+
+Search: Uses different search results, such as headphones, phones and invalid queries
+
+Shop dropdown: Uses different links, such as Appliances and Computers, Tablets and Accessories in a dropdown menu
+
+Store Locations: Checks store locations in Calgary, AB (10 stores)
+
+Add item to cart: Checks successful addition of headphones to cart
+
+Sales filter: Navigates to washing machines section and applies sales filter
+
+### Walmart
+
+Adding items to cart: tried going to different departments and adding various items to the cart
+
+Deals Search: Navigates deals section and selects item
+
+### Sportscheck
+
+Search Store: Search store location in Edmonton
+
+Switch Store: Tested store switch functionality
+
+Mail List Signup: Checks error message for invalid email, and preentive submission with empty fields
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
