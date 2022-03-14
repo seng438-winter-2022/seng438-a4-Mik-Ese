@@ -17,7 +17,7 @@
       "id": "8c988758-746e-46c2-81fb-609cb6370fc1",
       "comment": "",
       "command": "setWindowSize",
-      "target": "714x692",
+      "target": "1608x960",
       "targets": [],
       "value": ""
     }, {
@@ -235,7 +235,7 @@
       "id": "e4bfa4b2-4867-471d-8cf9-a9eeaa92a31c",
       "comment": "",
       "command": "setWindowSize",
-      "target": "714x692",
+      "target": "1608x960",
       "targets": [],
       "value": ""
     }, {
@@ -290,24 +290,24 @@
       "value": ""
     }]
   }, {
-    "id": "bb04c735-5c88-45f0-912d-393ae4da1a1d",
-    "name": "Bestbuy_Search (2)",
+    "id": "c414f81d-0189-4f64-91c3-322da7e407dc",
+    "name": "Bestbuy_Search (2) ",
     "commands": [{
-      "id": "18ad6362-2c19-44c3-807a-3e605d964fb1",
+      "id": "baac6cd7-25d2-4a9d-8123-be34a6e682f4",
       "comment": "",
       "command": "open",
       "target": "https://www.bestbuy.ca/en-ca",
       "targets": [],
       "value": ""
     }, {
-      "id": "99446774-9227-4bea-8e60-585f4e1b581d",
+      "id": "e25b146b-64cb-489c-aa26-49319ac41bcd",
       "comment": "",
       "command": "setWindowSize",
-      "target": "714x692",
+      "target": "1608x960",
       "targets": [],
       "value": ""
     }, {
-      "id": "590af333-f4f0-4de8-bc9c-305155499a22",
+      "id": "3059b6fb-031c-4f96-b76e-e27329dbd3c0",
       "comment": "",
       "command": "click",
       "target": "name=search",
@@ -320,7 +320,7 @@
       ],
       "value": ""
     }, {
-      "id": "4967baea-4133-4c73-9196-cd3fe6d26388",
+      "id": "ba8f7002-e7fa-4066-9168-80e51263b9be",
       "comment": "",
       "command": "type",
       "target": "name=search",
@@ -333,7 +333,7 @@
       ],
       "value": ""
     }, {
-      "id": "0611fdb4-3140-4618-80dc-ad3af3339ef4",
+      "id": "30634288-0e89-457b-9624-cb40a018f6ed",
       "comment": "",
       "command": "sendKeys",
       "target": "name=search",
@@ -346,29 +346,22 @@
       ],
       "value": "${KEY_ENTER}"
     }, {
-      "id": "03d07bc5-048a-4f41-aca4-283c3c2b5c97",
+      "id": "a067c3e7-07ea-40f7-98ad-179eba8512da",
       "comment": "",
       "command": "verifyElementPresent",
-      "target": "css=h1",
+      "target": "css=h3",
       "targets": [
         ["css=h1", "css:finder"],
         ["xpath=//div[@id='root']/div/div[2]/div/div/main/div/div/h1", "xpath:idRelative"],
         ["xpath=//h1", "xpath:position"],
         ["xpath=//h1[contains(.,'Sorry, we couldn’t find anything for \"\"')]", "xpath:innerText"]
       ],
-      "value": "Sorry, we couldn’t find anything for \"\""
+      "value": "Try these search tips:"
     }]
   }],
   "suites": [{
     "id": "29a23287-6aa4-4ef7-ac21-c142fe19e9a3",
     "name": "Default Suite",
-    "persistSession": false,
-    "parallel": false,
-    "timeout": 300,
-    "tests": []
-  }, {
-    "id": "a5f58206-665c-4ffb-83c3-4f0d16c7f714",
-    "name": "Bestbuy_Test_Suite",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
