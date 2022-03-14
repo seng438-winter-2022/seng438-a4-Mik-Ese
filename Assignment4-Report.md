@@ -114,11 +114,11 @@ Some of the test classes were able to better find mutants than others. Comparing
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 
-Equivalent Mutant are when the source code is modified via mutant testing, but they do not change the original functionality of the program. This means that this mutant will produce correct outputs and will survive the mutant testing, but it is not a bug, as it is equivalent to the original code. This mutant is mainly found in loops, when there is a condition to check when to break out of the loop. This was found in line 104 in `DataUtilities.java`, for the method `clone`. What this means to the overall mutation score is that it is realistically unachievable to get a 100% score, as loops are essential in many programs.
+Equivalent Mutant are when the source code is modified via mutant testing, but they do not change the original functionality of the program. This means that this mutant will produce correct outputs and will survive the mutant testing, but it is not a bug, as it is equivalent to the original code. This mutant is mainly found in loops, when there is a condition to check when to break out of the loop. An example can be found in line 104 in `DataUtilities.java`, for the function `clone`. What this means to the overall mutation score is that it is realistically unachievable to get a 100% score, as loops are essential in many programs.
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 
-To improve the mutation scores of the test suite, more tests had to be added that would kill the corresponding mutants. For example, most our original test cases did not kill off the post-increment/decrement mutants. To fix this, we had to create new tests that could check if variables were updated after the line had completed. This was able to kill off most of these mutants. Other mutants also required new test cases that catered to specific behavior in order for them to be killed.
+To improve the mutation scores of the test suite, more tests had to be added that would kill the corresponding mutants. For example, most of our original test cases did not kill off the post-increment/decrement mutants. To fix this, we had to create new tests that could check if variables were updated after the line had completed. This was able to kill off most of these mutants. Other mutants also required new test cases that catered to specific behavior in order for them to be killed.
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
 
@@ -130,12 +130,11 @@ The disadvantages of mutation testing include the amount of time and resources n
 
 # Explain your SELENUIM test case design process
 
-Our group designed the Selenium test cases by first looking through the websites and seeing what functionality was available. Based on that, we would decide which paths to take in the website. Then, we would start Selenium and record our test cases. After this, we would replay them to check if Selenium was able to record all of the keystrokes and mouse clicks correctly.
+Our group designed the Selenium test cases by first looking through the websites and seeing what functionality was available. Based on that, we would decide which paths to take in the website. Then, we would start Selenium and record our test cases. After this, we would replay them to check if Selenium was able to record all of the keystrokes and mouse clicks correctly with no errors.
 
 # Explain the use of assertions and checkpoints
 
-Assertions and Checkpoints are used to verify certain conditions in GUI Testing. Conditions can include checking if a certain element is on the page, or checking if an element contains a text.
-Our group used assertions to see if Selenium clicked the right part of the webpage and if the correct GUI element was available. This would help with error checking the scripts because if the webpage was either updated or not loading properly, our assertions would catch those problems.
+Assertions and Checkpoints are used to verify certain conditions in GUI Testing. Conditions can include checking if a certain element is on the page, or checking if an element contains a text. Our group used assertions to see if Selenium clicked the right part of the webpage and if the correct GUI element was available. This would help with error checking the scripts because if the webpage was either updated or not loading properly, our assertions would catch those problems.
 
 # How did you test each functionaity with different test data
 
@@ -181,7 +180,7 @@ Disadvantages include lack of documentation and having to write the scripts manu
 
 For the mutation testing, members collaborated to think of how to kill the mutants that survived our original test suite. We used a peer-programming method where one person coded and the rest would provide input.
 
-For the GUI testing, each member developed 2 or more test cases on the same website using the Selenium IDE.
+For the GUI testing, each member developed 2 or more test cases for a website using the Selenium IDE. These scripts were passed around to make sure they worked on different machines.
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
