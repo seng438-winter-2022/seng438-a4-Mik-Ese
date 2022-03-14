@@ -164,6 +164,10 @@ Switch Store: Tested store switch functionality
 
 Mail List Signup: Checks error message for invalid email, and preentive submission with empty fields
 
+### Files
+
+Project files for Selenium can be found [here](https://github.com/seng438-winter-2022/seng438-a4-Mik-Ese/tree/main/Selenium%20IDE%20Project%20files)
+
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
 ### Selenium
