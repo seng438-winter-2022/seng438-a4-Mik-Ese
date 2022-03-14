@@ -106,6 +106,8 @@ In our original test suite this mutant was killed. Since many assertions made we
 
 # Analysis drawn on the effectiveness of each of the test classes
 
+Some of the test classes were able to better find mutants than others. Comparing the original and new mutation scores, certain functions which reused local variables were better at killing mutants. However, most of the functions from the Range class and a few from the DataUtilities class were unable to kill the same type of mutants (ex. post-increment/decrement, condition changes). Due to this, our group needed to design extra test cases which were able to kill these mutants.
+
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 
 Equivalent Mutant are when the source code is modified via mutant testing, but they do not change the original functionality of the program. This means that this mutant will produce correct outputs and will survive the mutant testing, but it is not a bug, as it is equivalent to the original code. This mutant is mainly found in loops, when there is a condition to check when to break out of the loop. This was found in line 104 in DataUtilities.java, for the function clone. What this means to the overall mutation score is that it is realistically impossible to get a 100% score, as loops are essential in many programs.
@@ -114,9 +116,19 @@ Equivalent Mutant are when the source code is modified via mutant testing, but t
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
 
+Mutation testing allows for developers to see if the current program is able to catch more complex or rare errors. It also can help developers see if conditions for loops or if statements can be exploited. In general, mutation testing is another way to see how faults can be introduced by either the software or users.
+
+The advantages of mutation testing include being able to find more faults, having more metrics to improve test suites and providing a more thorough check of the program's functionality.
+
+The disadvantages of mutation testing include the amount of time and resources needed to implement it. Mutation testing takes a lot of time and a decent amount of computation power to automate, which slows down the development process.
+
 # Explain your SELENUIM test case design process
 
+Our group designed the Selenium test cases by first looking through the websites and seeing what functionality was available. Based on that, we would decide which paths to take in the website. Then, we would start Selenium and record our test cases. After this, we would replay them to check if Selenium was able to record all of the keystrokes and mouse clicks correctly.
+
 # Explain the use of assertions and checkpoints
+
+Our group used assertions to see if Selenium clicked the right part of the webpage and if the correct GUI element was available. This would help with error checking the scripts because of the webpage was either updated or not loading properly, our assertions would catch those problems.
 
 # How did you test each functionaity with different test data
 
@@ -124,10 +136,36 @@ Bestbuy - Search, We used different search results, such as headphones, phones a
 
 Bestbuy - Shop dropdown - We used different links, such as Appliances and Computers, Tablets and Accessories
 
-# Discuss advantages and disadvantages of Selenium vs. Sikulix
+Advantages include thorough documentation, easy to use interface and effective playback features.
+Disadvantages include resource consumption.
+
+### Sikulix
+
+Advantages are being able to include screenshots of the webpage in the program.
+Disadvantages include lack of documentation and having to write the scripts manually.
 
 # How the team work/effort was divided and managed
 
+For the mutation testing, members collaborated to think of how to kill the mutants that survived our original test suite. We used a peer-programming method where one person coded and the rest would provide input.
+
+For the GUI testing, each member developed 2 or more test cases on the same website using the Selenium IDE.
+
 # Difficulties encountered, challenges overcome, and lessons learned
 
+### Difficulties encountered
+
+-   High usage of computer resources (ex. high CPU and GPU usage, high temperatures of internal parts)
+
+### Challenges overcome
+
+-
+
+### Lessons learned
+
+-   How to use Selenium
+-   How to use Pitest
+-   How to develop test cases that will kill mutants
+
 # Comments/feedback on the lab itself
+
+Informative lab about how to perform mutation and GUI testing.
