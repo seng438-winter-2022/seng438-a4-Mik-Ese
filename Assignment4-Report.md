@@ -139,9 +139,15 @@ Bestbuy - Search: We used different search results, such as headphones, phones a
 Bestbuy - Shop dropdown: We used different links, such as Appliances and Computers, Tablets and Accessories
 Walmart - Adding items to cart: tried going to different departments and adding various items to the cart
 
+# Discuss advantages and disadvantages of Selenium vs. Sikulix
+
+### Selenium
+Advantages include thorough documentation, easy to use UI and being able to replay the scripts in real time (via web browser).
+Disadvantages include high resource consumption and slow execution speed.
+
 ### Sikulix
 
-Advantages are being able to include screenshots of the webpage in the program.
+Advantages include being able to include screenshots of the webpage in the program.
 Disadvantages include lack of documentation and having to write the scripts manually.
 
 # How the team work/effort was divided and managed
