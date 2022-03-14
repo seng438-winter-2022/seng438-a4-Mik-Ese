@@ -139,8 +139,8 @@ Assertions and Checkpoints are used to verify certain conditions in GUI Testing.
 # How did you test each functionaity with different test data
 
 Bestbuy - Search: We used different search results, such as headphones, phones and invalid
-Bestbuy - Shop dropdown: We used different links, such as Appliances and Computers, Tablets and Accessories
-Walmart - Adding items to cart: tried going to different departments and adding various items to the cart
+\Bestbuy - Shop dropdown: We used different links, such as Appliances and Computers, Tablets and Accessories
+\Walmart - Adding items to cart: tried going to different departments and adding various items to the cart
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
