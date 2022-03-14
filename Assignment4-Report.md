@@ -20,7 +20,7 @@
 7. [Why do we need mutation testing? Advantages and disadvantages of mutation testing](#Why-do-we-need-mutation-testing?-Advantages-and-disadvantages-of-mutation-testing)
 8. [Explain your SELENUIM test case design process](#Explain-your-SELENUIM-test-case-design-process)
 9. [Explain the use of assertions and checkpoints](#Explain-the-use-of-assertions-and-checkpoints)
-10. [how did you test each functionaity with different test data](#how-did-you-test-each-functionaity-with-different-test-data)
+10. [How did you test each functionaity with different test data](#How-did-you-test-each-functionaity-with-different-test-data)
 11. [Discuss advantages and disadvantages of Selenium vs. Sikulix](#Discuss-advantages-and-disadvantages-of-Selenium-vs.-Sikulix)
 12. [How the team work/effort was divided and managed](#How-the-team-work/effort-was-divided-and-managed)
 13. [Difficulties encountered, challenges overcome, and lessons learned](#Difficulties-encountered-challenges-overcome-and-lessons-learned)
@@ -28,13 +28,87 @@
 
 # Introduction
 
+This lab was used to teach students about mutation faults in Java and how to remedy these faults using the PiTest Tool in Eclipse. Furthermore, we learned how to implement GUI automation through Selenium and Sikulix, and compared these tools. Before the lab we were aware of the concepts of mutation testing and automated GUI testing from the course lectures. With the lab we put these concepts into practice with the various aformentioned tools.
+
 # Analysis of 10 Mutants of the Range class
+
+### 1. Incremented (a++) double local variable:
+
+This mutation alters the source code by incrementing the specified local variable (of type double in this case) by 1 after it is passed (post-increment).\
+For example if a line of code is: `double result = value` it would be mutated to be `double result = value++`.
+
+In our original test suite this mutant was killed in some cases and survived in others. This was due to whether the change had lasting effects throughout the method or it was overwritten by later code before the return statement.
+
+### 2. Decremented (--a) double local variable:
+
+This mutation alters the source code by decrementing the specified local variable (of type double in this case) by 1 before it is passed (pre-decrement).\
+For example if a line of code is: `double resule = value` it would be muated to be `double result = --value`.
+
+In our original test suite this mutant was killed in some cases and survived in others. This was due to whether the change had lasting effects throughout the method or it was overwritten by later code before the return statement.
+
+### 3. Replaced double division with multiplication:
+
+This mutation alters the source code by exchanging the division operator with the multiplication operator in a double division.\
+For example if a line of code is: `return value / 2.0` it would be muated to be `return value * 2.0`
+
+In our original test suite this mutant was killed. Since it drastically altered the return value for the mutated method, it was killed by most test cases since they didn't solely test with zeros.
+
+### 4. Replaced double division with modulus
+
+This mutation alters the source code by exchanging the division operator with the modulus operator in a double division.\
+For example if a line of code is: `return value / 2.0` it would be muated to be `return value % 2.0`
+
+In our original test suite this mutant was killed. Since it drastically altered the return value for the mutated method, it was killed by most test cases since they didn't solely test with zeros and common multiples.
+
+### 5. negated conditional:
+
+This mutant alters the source code by negating a condition.\
+For example if a line of code is: `if (lower > upper)` it would be mutated to be `if (!(lower > upper))`
+
+In our original test suite this mutant was always killed for the methods that were covered. Since branch coverage was 100% this meant that we had test cases that ensured the conditions for the method called were all explored.
+
+### 6. Less than to equal:
+
+This mutant exchanges the "less than" operator with the equality operator "==" in conditional statements.\
+For example if a line of code is: `return (value < upper)` it would be mutated to be `return (value == upper)`
+
+In our original test suite this mutant was killed. We had enough coverage for the boudaries of the relevant methods, for all instances to be detected and killed.
+
+### 7. greater than to equal:
+
+This mutant exchanges the "greater than" operator with the equality operator "==" in conditional statements.\
+For example if a line of code is: `return (value > lower)` it would be mutated to be `return (value == lower)`
+
+In our original test suite this mutant was killed. We had enough coverage for the boudaries of the relevant methods, for all instances to be detected and killed.
+
+### 8. not equal to equal:
+
+This mutant exchanges the inequality operator "!=" with the equality operator "==", or alternatively it removes the "!" operator if present.\
+For example if a line of code is: `if (!contains(value))` it would be mutated to be `if (contains(value))`
+
+In our original test suite this mutant was killed. We had enough branch and conditional coverage for the relevant methods, such that all instances were detected and killed.
+
+### 9. removed conditional - replaced comparison check with false:
+
+This mutant alters the source code by removing conditional statements entirely and replacing them with `false`.\
+For example if a line of code is: `if (lower > upper)` it would be replaced with `if (false)`
+
+In our original test suite this mutant was killed in some cases and survived in others. This was often due to the types of assertions in our test cases being too uniform and thus not detecting the unchaging operation of the method under test.
+
+### 10. replaced return value with null:
+
+This mutant alters the source code by exchanging the return value with that of `null`.\
+For example if a line of code is: `return range` it would be replaced with `return null`
+
+In our original test suite this mutant was killed. Since many assertions made were checking for specific numerical return values, every instance of this mutation was killed.
 
 # Report all the statistics and the mutation score for each test class
 
 # Analysis drawn on the effectiveness of each of the test classes
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
+
+Equivalent Mutant are when the source code is modified via mutant testing, but they do not change the original functionality of the program. This means that this mutant will produce correct outputs and will survive the mutant testing, but it is not a bug, as it is equivalent to the original code. This mutant is mainly found in loops, when there is a condition to check when to break out of the loop. This was found in line 104 in DataUtilities.java, for the function clone. What this means to the overall mutation score is that it is realistically impossible to get a 100% score, as loops are essential in many programs.
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 
@@ -44,7 +118,11 @@
 
 # Explain the use of assertions and checkpoints
 
-# how did you test each functionaity with different test data
+# How did you test each functionaity with different test data
+
+Bestbuy - Search, We used different search results, such as headphones, phones and invalid
+
+Bestbuy - Shop dropdown - We used different links, such as Appliances and Computers, Tablets and Accessories
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
