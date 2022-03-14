@@ -166,6 +166,7 @@ For the GUI testing, each member developed 2 or more test cases on the same webs
 
 - Installation of Pitest
 - Compatibility issues of Pitest with Java compiler
+- Identifying why mutants survived
 
 ### Lessons learned
 
