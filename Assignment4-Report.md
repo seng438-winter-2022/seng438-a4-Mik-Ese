@@ -103,6 +103,7 @@ For example if a line of code is: `return range` it would be replaced with `retu
 In our original test suite this mutant was killed. Since many assertions made were checking for specific numerical return values, every instance of this mutation was killed.
 
 # Report all the statistics and the mutation score for each test class
+>>> Add link to HTML files
 
 # Analysis drawn on the effectiveness of each of the test classes
 
@@ -113,6 +114,8 @@ Some of the test classes were able to better find mutants than others. Comparing
 Equivalent Mutant are when the source code is modified via mutant testing, but they do not change the original functionality of the program. This means that this mutant will produce correct outputs and will survive the mutant testing, but it is not a bug, as it is equivalent to the original code. This mutant is mainly found in loops, when there is a condition to check when to break out of the loop. This was found in line 104 in DataUtilities.java, for the function clone. What this means to the overall mutation score is that it is realistically impossible to get a 100% score, as loops are essential in many programs.
 
 # A discussion of what could have been done to improve the mutation score of the test suites
+
+To improve the mutation scores of the test suite, more tests had to be added that would kill the corresponding mutants. For example, most our original test cases did not kill off the post-increment/decrement mutants. To fix this, we had to create new tests that could check if variables were updated after the line had completed. This was able to kill off most of these mutants. Other mutants also required new test cases that catered to specific behavior in order for them to be killed.
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
 
@@ -132,12 +135,9 @@ Our group used assertions to see if Selenium clicked the right part of the webpa
 
 # How did you test each functionaity with different test data
 
-Bestbuy - Search, We used different search results, such as headphones, phones and invalid
-
-Bestbuy - Shop dropdown - We used different links, such as Appliances and Computers, Tablets and Accessories
-
-Advantages include thorough documentation, easy to use interface and effective playback features.
-Disadvantages include resource consumption.
+Bestbuy - Search: We used different search results, such as headphones, phones and invalid
+Bestbuy - Shop dropdown: We used different links, such as Appliances and Computers, Tablets and Accessories
+Walmart - Adding items to cart: tried going to different departments and adding various items to the cart
 
 ### Sikulix
 
