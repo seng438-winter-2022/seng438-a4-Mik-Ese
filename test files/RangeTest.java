@@ -413,7 +413,7 @@ public class RangeTest {
     	"Range[-1.0,1.0]", exampleRange.toString());
     }
     
- // 2 tests for expand() and getLength()
+    // Tests for expand() and getLength()
     @Test
     public void lowerBoundShoulBeZero() {
         Range testRange = Range.expand(exampleRange, -2.0, -2.0);
@@ -431,6 +431,23 @@ public class RangeTest {
     	Range.expand(exampleRange, 2.0, 2.0);
         Range testRange = Range.expand(exampleRange, 2.0, 2.0);
         assertEquals("The range expanded by margins of 2.0 should have a lower boundary of -5.0", -5.0, testRange.getLowerBound(), .000000001d);
+    }
+
+    @Test(expected = IllegalArgumentException.class)	// mutation testing
+	public void expandMutationException() {
+		Range.expand(null, 0, 0);
+	}
+
+    @Test	// mutation testing
+    public void expandMutation() {
+      Range range = new Range(-21, 37);
+        Range result = Range.expand(range, 11, 7);
+        
+        assertEquals("Lower bound should be -659", -659, 
+              result.getLowerBound(), .000000001d);
+        
+        assertEquals("Upper bound should be 443", 443, 
+              result.getUpperBound(), .000000001d);
     }
     
     // expandToInclude()
@@ -463,6 +480,14 @@ public class RangeTest {
     	Range.expandToInclude(exampleRange2, 1.5);
         Range testRange = Range.expandToInclude(exampleRange2, 1.5);
         assertEquals("The range expanded to include 1.5 should have a upper boundary of 2.0", 2.0, testRange.getUpperBound(), .000000001d);
+    }
+
+    @Test	// mutation testing
+    public void expandToIncludeMutation() {
+    	Range range = new Range(-1, 1);
+    	Range result = Range.expandToInclude(range, -1);
+        assertEquals("The null range expanded to include -1 should have an upper boundary of 1", -1, 
+        		result.getLowerBound(), .000000001d);
     }
     
     // hashCode
@@ -548,6 +573,20 @@ public class RangeTest {
         assertTrue("The range of (-5, -1.5) should intersect with the range of (-2, -1)",
                 exampleRange3.intersects(-5, -1.5));
     }
+
+    @Test	// mutation testing
+    public void intersectsMutation(){
+    	Range range = new Range(-1, 1);  	
+    	
+        assertFalse("The range of (-1, 1) and (-1, -1) should not intersect",
+        		range.intersects(-1, -1));
+        
+        assertTrue("The range of (-1, 1) and (0, 0) should intersect",
+                range.intersects(0, 0));
+        
+        assertTrue("The range of (-1, 1) and (0, 0) should intersect",
+                range.intersects(0, 0));
+    }
     
     // constrain
     @Test
@@ -605,6 +644,25 @@ public class RangeTest {
         Range.scale(exampleRange, 2);
         assertEquals(compareRange, Range.scale(exampleRange, 2));
     }
+
+    @Test(expected = IllegalArgumentException.class)	// mutation testing
+	public void scaleMutationException1() {
+		Range.scale(null, 0);
+	}
+    
+    @Test(expected = IllegalArgumentException.class)	// mutation testing
+    public void scaleMutationException2() {
+    	Range range = new Range(-1, -1);
+    	Range.scale(range, -1);
+    }
+    
+    @Test	// mutation testing
+    public void scaleMutation() {
+    	Range range = new Range(-1, 1);
+    	
+        Range compareRange1 = new Range(0,0);
+        assertEquals("Range should be (0,0)", compareRange1, Range.scale(range, 0));
+    }
     
     // shift 2 parameters
     @Test
@@ -627,6 +685,21 @@ public class RangeTest {
         exRange = Range.shift(exRange, 2);
         assertEquals(resultRange, Range.shift(exRange, 2));
     }
+
+    @Test	// mutation testing
+    public void shiftMutation() {
+    	Range resultRange1 = new Range(-2, -2);
+        Range exRange = new Range(0,0);
+        assertEquals("Range should be (-2, -2)", resultRange1, Range.shift(exRange, -2));
+        
+        Range range1 = new Range(-1, 1);
+        Range resultRange2 = new Range(-2, 0);
+        assertEquals("Range should be (-2, 0)", resultRange2, Range.shift(range1, -1));
+        
+        Range range2 = new Range(-1, 1);
+        Range resultRange3 = new Range(-6, 0);
+        assertEquals("Range should be (-6, 0)", resultRange3, Range.shift(range2, -5));
+    }
     
     // shift 3 parameters
     @Test
@@ -634,6 +707,57 @@ public class RangeTest {
         Range resultRange = new Range(1, 3);
         assertEquals(resultRange, Range.shift(exampleRange, 2, true));
         
+    }
+
+    @Test(expected = IllegalArgumentException.class)	// mutation testing
+	public void shiftMutationException() {
+		Range.shift(null, 0, true);
+	}
+
+    // min
+    @Test	// mutation testing
+    public void minMutation() {
+    	Range range1 = new Range(Double.NaN, 1);
+    	Range range2 = new Range(2, 3);
+    	Range result1 = Range.combineIgnoringNaN(range1, range2);
+    	assertEquals("The resulting range should be 2.0", 2.0,
+            	result1.getLowerBound(), .000000001d);
+    	
+    	Range range3 = new Range(1, 2);
+    	Range range4 = new Range(Double.NaN, 3);
+    	Range result2 = Range.combineIgnoringNaN(range3, range4);
+    	assertEquals("The resulting range should be 1.0", 1.0,
+            	result2.getLowerBound(), .000000001d);
+   	}
+    
+    // max
+    @Test	// mutation testing
+    public void maxMutation() {
+    	Range range1 = new Range(1, Double.NaN);
+    	Range range2 = new Range(2, 3);
+    	Range result1 = Range.combineIgnoringNaN(range1, range2);
+    	assertEquals("The resulting range should be 3.0", 3.0,
+            	result1.getUpperBound(), .000000001d);
+    	
+    	Range range3 = new Range(1, 2);
+    	Range range4 = new Range(3, Double.NaN);
+    	Range result2 = Range.combineIgnoringNaN(range3, range4);
+    	assertEquals("The resulting range should be 2.0", 2.0,
+            	result2.getUpperBound(), .000000001d);
+    }
+
+    // Range
+    @Test(expected = IllegalArgumentException.class)	// mutation testing
+    public void rangeMutationException() {
+    	new Range(1, -1);
+    }
+    
+    @Test	// mutation testing
+    public void rangeMutation() {
+    	Range range = new Range(-1, 1);
+    	assertEquals("Lower bound should be -1", -1, range.getLowerBound(), .000000001d);
+    	
+    	assertEquals("Upper bound should be 1", 1, range.getUpperBound(), .000000001d);
     }
     
 //    @After
