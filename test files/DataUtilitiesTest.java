@@ -11,10 +11,10 @@ import org.jmock.Mockery;
 import org.junit.*;
 
 public class DataUtilitiesTest{
-    Mockery mockClass=new Mockery();
-    final Values2D table=mockClass.mock(Values2D.class);
+	Mockery mockClass=new Mockery();
+	final Values2D table=mockClass.mock(Values2D.class);
 
-    // equal
+  // equal
 	@Test
 	public void checkTwoArraysEqual() {
 		double array[][] = new double[2][2];
@@ -114,6 +114,17 @@ public class DataUtilitiesTest{
 		
 		DataUtilities.equal(array2, array);
 		assertFalse(DataUtilities.equal(array2, array));
+	}
+
+	@Test	// mutation testing
+	public void equalMutation() {
+			double array[][] = {    
+							{1}, {2}
+			};
+			double array2[][] = {
+							{1}, {2}, {3}
+			};
+			assertFalse(DataUtilities.equal(array, array2));
 	}
 	
 	// calculateColumnTotal 2 parameters
@@ -257,26 +268,26 @@ public class DataUtilitiesTest{
                 4.03, 0.000000001d);
     }
     
-    @Test
-	public void calculateColumnTotalDataContainsNullValue() {
-	    mockClass.checking(new Expectations(){ {
-		    one(table).getRowCount();
-		    will(returnValue(1));
-		
-		    one(table).getValue(0, 0);
-		    will(returnValue(null));   // Row 0 column 0 has null
-	    } });
-	    
-	    final int column = 0;
-	    
-	    assertEquals("calculateColumnTotal(Values2D data, int column) should return 0.0",
-	    		0.0, DataUtilities.calculateColumnTotal(table, column), 0.000000001d);
-	}
+		@Test
+		public void calculateColumnTotalDataContainsNullValue() {
+				mockClass.checking(new Expectations(){ {
+					one(table).getRowCount();
+					will(returnValue(1));
+			
+					one(table).getValue(0, 0);
+					will(returnValue(null));   // Row 0 column 0 has null
+				} });
+				
+				final int column = 0;
+				
+				assertEquals("calculateColumnTotal(Values2D data, int column) should return 0.0",
+						0.0, DataUtilities.calculateColumnTotal(table, column), 0.000000001d);
+		}
     
     @Test(expected = IllegalArgumentException.class)	// mutation testing
-	public void calculateColumnTotalNullException() {
-		DataUtilities.calculateColumnTotal(null, 0);
-	}
+		public void calculateColumnTotalNullException() {
+			DataUtilities.calculateColumnTotal(null, 0);
+		}
     
     @Test	// mutation testing
     public void calculateColumnTotalAllPosIntTwice(){
@@ -298,8 +309,23 @@ public class DataUtilitiesTest{
         assertEquals("calculateColumnTotal should return 6.0", DataUtilities.calculateColumnTotal(table, 0),
                 6.0, 0.000000001d);
     }
+
+		@Test	// mutation testing
+    public void calculateColumnTotalMutation() {
+    	mockClass.checking(new Expectations(){ {
+            one(table).getRowCount();
+            will(returnValue(1));
+
+            one(table).getValue(0, 0);
+            will(returnValue(1));   // Row 0 column 0 has value 1
+        } });
+    	int arr[] = {1};
+
+        assertEquals("calculateColumnTotal should return 0.0", 0.0, DataUtilities.calculateColumnTotal(table, 0, arr),
+                0.000000001d);
+    }
 	
-	// calculateRowTotal 2 parameters
+		// calculateRowTotal 2 parameters
     @Test
     public void calculateRowTotalNoRows(){
         mockClass.checking(new Expectations(){ {
@@ -541,9 +567,9 @@ public class DataUtilitiesTest{
     }
     
     @Test(expected = IllegalArgumentException.class)	// mutation testing
-	public void calculateRowTotalThreeParamsNullException() {
-		DataUtilities.calculateRowTotal(null, 0, null);
-	}
+		public void calculateRowTotalThreeParamsNullException() {
+			DataUtilities.calculateRowTotal(null, 0, null);
+		}
     
     @Test	// mutation testing
     public void calculateRowTotalShouldReturnTwoTwice(){
